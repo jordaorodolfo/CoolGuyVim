@@ -71,4 +71,12 @@ set shiftwidth=4
 set ruler
 
 " New programns using the same keybiddings are just coincidence.
-nmap <C-P> :FZF
+nmap <C-P> :FZF <Enter>
+
+" lets make some snippet magic
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
