@@ -80,3 +80,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" some integration for airline.
+let g:airline#extensions#tabline#enabled = 1
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
