@@ -45,6 +45,8 @@ Plug 'tpope/vim-fugitive'
 " Languages, languages everywhere
 Plug 'sheerun/vim-polyglot'
 
+" Very good propaganda.
+Plug 'neomake/neomake'
 
 call plug#end()
 
