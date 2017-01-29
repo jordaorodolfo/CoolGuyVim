@@ -48,6 +48,9 @@ Plug 'sheerun/vim-polyglot'
 " Very good propaganda.
 Plug 'neomake/neomake'
 
+" some more javascript and typescript, web stuff
+Plug 'pangloss/vim-javascript.git'
+
 call plug#end()
 
 " No lines, no code
@@ -68,8 +71,8 @@ set ignorecase
 set autoindent
 set smartindent
 set smarttab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set ruler
 
 " New programns using the same keybiddings are just coincidence.
