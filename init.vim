@@ -1,3 +1,7 @@
+" the only leader you ever need
+let mapleader="\<Space>"
+let maplocalleader="\<Space>"
+
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -36,6 +40,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Pretty isn't bad, people.
 "Plug 'iCyMind/NeoSolarized'
 Plug 'joshdick/onedark.vim'
+Plug 'Zenburn'
 Plug 'vim-airline/vim-airline'
 
 " Well... Git.
@@ -44,17 +49,19 @@ Plug 'tpope/vim-fugitive'
 
 " Languages, languages everywhere
 Plug 'sheerun/vim-polyglot'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Very good propaganda.
 Plug 'neomake/neomake'
 
 " some more javascript and typescript, web stuff
-Plug 'pangloss/vim-javascript.git'
+"Plug 'pangloss/vim-javascript.git'
 
 call plug#end()
 
 " No lines, no code
-set number
+"set number
+set relativenumber
 
 " Feeling thirsty.
 set termguicolors
@@ -75,9 +82,6 @@ set tabstop=2
 set shiftwidth=2
 set ruler
 
-" New programns using the same keybiddings are just coincidence.
-nmap <C-P> :FZF <Enter>
-
 " lets make some snippet magic
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -91,3 +95,21 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+
+" greatest keybindings of all time
+" files
+nmap <leader>fs :w<Enter>
+nmap <leader>ff :FZF<Enter>
+nmap <leader>fc :e ~/.config/nvim/init.vim<Enter>
+" windows
+nmap <leader>wv <C-w>v<Enter>
+nmap <leader>wc <C-w>c<Enter>
+nmap <leader>wq <C-w>q<Enter>
+" buffers
+nmap <leader>bd :bd<Enter>
+" version control
+nmap <leader>gs :Gw<Enter>
+nmap <leader>gS :Gstatus<Enter>
+nmap <leader>gc :Gcommit<Enter>
+nmap <leader>gp :Gpush<Enter>
+nmap <leader>gP :Gpull<Enter>
