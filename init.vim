@@ -1,3 +1,24 @@
+" Searching must me nice.
+set incsearch
+set hlsearch
+set smartcase
+set ignorecase
+
+" Identation should be nice.
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set ruler
+
+" No lines, no code
+set number
+
+" best of all keys
+let g:mapleader="\<Space>"
+let g:maplocalleader="\<Space>m"
+
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -51,29 +72,17 @@ Plug 'neomake/neomake'
 " some more javascript and typescript, web stuff
 Plug 'pangloss/vim-javascript.git'
 
+" julia support
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/deoplete-julia'
+
 call plug#end()
 
-" No lines, no code
-set number
 
 " Feeling thirsty.
 set termguicolors
 colorscheme onedark
 filetype plugin on
-
-" Searching must me nice.
-set incsearch
-set hlsearch
-set smartcase
-set ignorecase
-
-" Identation should be nice.
-set autoindent
-set smartindent
-set smarttab
-set tabstop=2
-set shiftwidth=2
-set ruler
 
 " New programns using the same keybiddings are just coincidence.
 nmap <C-P> :FZF <Enter>
