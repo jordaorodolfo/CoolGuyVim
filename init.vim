@@ -57,6 +57,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Pretty isn't bad, people.
 "Plug 'iCyMind/NeoSolarized'
 Plug 'joshdick/onedark.vim'
+Plug 'Zenburn'
 Plug 'vim-airline/vim-airline'
 
 " Well... Git.
@@ -65,12 +66,13 @@ Plug 'tpope/vim-fugitive'
 
 " Languages, languages everywhere
 Plug 'sheerun/vim-polyglot'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Very good propaganda.
 Plug 'neomake/neomake'
 
 " some more javascript and typescript, web stuff
-Plug 'pangloss/vim-javascript.git'
+"Plug 'pangloss/vim-javascript.git'
 
 " julia support
 Plug 'JuliaEditorSupport/julia-vim'
@@ -78,6 +80,9 @@ Plug 'JuliaEditorSupport/deoplete-julia'
 
 call plug#end()
 
+" No lines, no code
+"set number
+set relativenumber
 
 " Feeling thirsty.
 set termguicolors
@@ -86,6 +91,19 @@ filetype plugin on
 
 " New programns using the same keybiddings are just coincidence.
 nmap <C-P> :FZF <Enter>
+" Searching must me nice.
+set incsearch
+set hlsearch
+set smartcase
+set ignorecase
+
+" Identation should be nice.
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set ruler
 
 " lets make some snippet magic
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -100,3 +118,21 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+
+" greatest keybindings of all time
+" files
+nmap <leader>fs :w<Enter>
+nmap <leader>ff :FZF<Enter>
+nmap <leader>fc :e ~/.config/nvim/init.vim<Enter>
+" windows
+nmap <leader>wv <C-w>v<Enter>
+nmap <leader>wc <C-w>c<Enter>
+nmap <leader>wq <C-w>q<Enter>
+" buffers
+nmap <leader>bd :bd<Enter>
+" version control
+nmap <leader>gs :Gw<Enter>
+nmap <leader>gS :Gstatus<Enter>
+nmap <leader>gc :Gcommit<Enter>
+nmap <leader>gp :Gpush<Enter>
+nmap <leader>gP :Gpull<Enter>
