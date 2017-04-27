@@ -128,8 +128,14 @@ nmap <leader>fc :e ~/.config/nvim/init.vim<Enter>
 nmap <leader>wv <C-w>v<Enter>
 nmap <leader>wc <C-w>c<Enter>
 nmap <leader>wq <C-w>q<Enter>
+nmap <leader>wh <C-w>h<Enter>
+nmap <leader>wj <C-w>j<Enter>
+nmap <leader>wk <C-w>k<Enter>
+nmap <leader>wl <C-w>l<Enter>
 " buffers
 nmap <leader>bd :bd<Enter>
+nmap <leader>bn :bn<Enter>
+nmap <leader>bp :bp<Enter>
 " version control
 nmap <leader>gs :Gw<Enter>
 nmap <leader>gS :Gstatus<Enter>
