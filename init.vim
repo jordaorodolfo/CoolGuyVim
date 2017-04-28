@@ -39,8 +39,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Pretty isn't bad, people.
 "Plug 'iCyMind/NeoSolarized'
-Plug 'joshdick/onedark.vim'
-Plug 'Zenburn'
+Plug 'flazz/vim-colorschemes'
+"Plug 'joshdick/onedark.vim'
+"Plug 'Zenburn'
 Plug 'vim-airline/vim-airline'
 
 " Well... Git.
@@ -56,6 +57,9 @@ Plug 'neomake/neomake'
 
 " some more javascript and typescript, web stuff
 "Plug 'pangloss/vim-javascript.git'
+
+" the surround plugin, very handy
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
