@@ -1,6 +1,23 @@
-" the only leader you ever need
-let mapleader="\<Space>"
-let maplocalleader="\<Space>"
+" Searching must me nice.
+set incsearch
+set hlsearch
+set smartcase
+set ignorecase
+
+" Identation should be nice.
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set ruler
+
+" No lines, no code
+set number
+
+" best of all keys
+let g:mapleader="\<Space>"
+let g:maplocalleader="\<Space>m"
 
 call plug#begin('~/.vim/plugged')
 
@@ -61,6 +78,10 @@ Plug 'neomake/neomake'
 " the surround plugin, very handy
 Plug 'tpope/vim-surround'
 
+" julia support
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/deoplete-julia'
+
 call plug#end()
 
 " No lines, no code
@@ -72,6 +93,8 @@ set termguicolors
 colorscheme onedark
 filetype plugin on
 
+" New programns using the same keybiddings are just coincidence.
+nmap <C-P> :FZF <Enter>
 " Searching must me nice.
 set incsearch
 set hlsearch
@@ -109,8 +132,14 @@ nmap <leader>fc :e ~/.config/nvim/init.vim<Enter>
 nmap <leader>wv <C-w>v<Enter>
 nmap <leader>wc <C-w>c<Enter>
 nmap <leader>wq <C-w>q<Enter>
+nmap <leader>wh <C-w>h<Enter>
+nmap <leader>wj <C-w>j<Enter>
+nmap <leader>wk <C-w>k<Enter>
+nmap <leader>wl <C-w>l<Enter>
 " buffers
 nmap <leader>bd :bd<Enter>
+nmap <leader>bn :bn<Enter>
+nmap <leader>bp :bp<Enter>
 " version control
 nmap <leader>gs :Gw<Enter>
 nmap <leader>gS :Gstatus<Enter>
