@@ -89,8 +89,6 @@ set termguicolors
 colorscheme onedark
 filetype plugin on
 
-" New programns using the same keybiddings are just coincidence.
-nmap <C-P> :FZF <Enter>
 " Searching must me nice.
 set incsearch
 set hlsearch
@@ -105,10 +103,13 @@ set tabstop=2
 set shiftwidth=2
 set ruler
 
+" latex
+let g:vimtex_compiler_latexmk#continuous = 1
+
 " lets make some snippet magic
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<C-n>"
+let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
