@@ -19,7 +19,7 @@ set number
 let g:mapleader="\<Space>"
 let g:maplocalleader="\<Space>m"
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Make sure you use single quotes
 " Yeah, we all know that.
@@ -111,9 +111,9 @@ set ruler
 let g:vimtex_compiler_latexmk#continuous = 1
 
 " lets make some snippet magic
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-n>"
-let g:UltiSnipsJumpBackwardTrigger="<C-b>"
+let g:UltiSnipsExpandTrigger="<leader>se"
+let g:UltiSnipsJumpForwardTrigger="<leader>sn"
+let g:UltiSnipsJumpBackwardTrigger="<leader>sb"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
