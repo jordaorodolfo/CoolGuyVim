@@ -1,3 +1,8 @@
+"new way to navigate
+nnoremap j h
+nnoremap k j
+nnoremap i k
+
 " Searching must me nice.
 set incsearch
 set hlsearch
@@ -34,7 +39,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -52,7 +57,13 @@ Plug 'posva/vim-vue'
 Plug 'neomake/neomake'
 
 " The dark(...) completer
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Pretty isn't bad, people.
 "Plug 'iCyMind/NeoSolarized'
@@ -67,7 +78,6 @@ Plug 'tpope/vim-fugitive'
 
 " Languages, languages everywhere
 Plug 'sheerun/vim-polyglot'
-Plug 'JuliaEditorSupport/julia-vim'
 
 " Very good propaganda.
 Plug 'neomake/neomake'
@@ -79,33 +89,19 @@ Plug 'neomake/neomake'
 Plug 'tpope/vim-surround'
 
 " julia support
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'JuliaEditorSupport/deoplete-julia'
+" Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/deoplete-julia', {'for': 'julia'}
 
 call plug#end()
 
 " No lines, no code
 "set number
-set relativenumber
+" set relativenumber
 
 " Feeling thirsty.
 set termguicolors
 colorscheme onedark
 filetype plugin on
-
-" Searching must me nice.
-set incsearch
-set hlsearch
-set smartcase
-set ignorecase
-
-" Identation should be nice.
-set autoindent
-set smartindent
-set smarttab
-set tabstop=2
-set shiftwidth=2
-set ruler
 
 " latex
 let g:vimtex_compiler_latexmk#continuous = 1
