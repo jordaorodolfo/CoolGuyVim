@@ -1,3 +1,9 @@
+"new way to navigate
+nnoremap j h
+nnoremap k j
+nnoremap i k
+nnoremap h i
+
 " Searching must me nice.
 set incsearch
 set hlsearch
@@ -34,7 +40,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -52,7 +58,13 @@ Plug 'posva/vim-vue'
 Plug 'neomake/neomake'
 
 " The dark(...) completer
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Pretty isn't bad, people.
 "Plug 'iCyMind/NeoSolarized'
@@ -79,12 +91,11 @@ Plug 'tpope/vim-surround'
 
 " julia support
 " Plug 'JuliaEditorSupport/julia-vim', {'for': 'julia'}
-Plug 'JuliaEditorSupport/deoplete-julia', {'for': 'julia'}
+" Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
 
 " No lines, no code
-" set number
 " set relativenumber
 
 " Feeling thirsty.
