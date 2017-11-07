@@ -2,6 +2,7 @@
 nnoremap j h
 nnoremap k j
 nnoremap i k
+nnoremap h i
 
 " Searching must me nice.
 set incsearch
