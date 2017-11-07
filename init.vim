@@ -67,7 +67,6 @@ Plug 'tpope/vim-fugitive'
 
 " Languages, languages everywhere
 Plug 'sheerun/vim-polyglot'
-Plug 'JuliaEditorSupport/julia-vim'
 
 " Very good propaganda.
 Plug 'neomake/neomake'
@@ -79,33 +78,19 @@ Plug 'neomake/neomake'
 Plug 'tpope/vim-surround'
 
 " julia support
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'JuliaEditorSupport/deoplete-julia'
+" Plug 'JuliaEditorSupport/julia-vim', {'for': 'julia'}
+Plug 'JuliaEditorSupport/deoplete-julia', {'for': 'julia'}
 
 call plug#end()
 
 " No lines, no code
-"set number
-set relativenumber
+" set number
+" set relativenumber
 
 " Feeling thirsty.
 set termguicolors
 colorscheme onedark
 filetype plugin on
-
-" Searching must me nice.
-set incsearch
-set hlsearch
-set smartcase
-set ignorecase
-
-" Identation should be nice.
-set autoindent
-set smartindent
-set smarttab
-set tabstop=2
-set shiftwidth=2
-set ruler
 
 " latex
 let g:vimtex_compiler_latexmk#continuous = 1
@@ -147,3 +132,5 @@ nmap <leader>gS :Gstatus<Enter>
 nmap <leader>gc :Gcommit<Enter>
 nmap <leader>gp :Gpush<Enter>
 nmap <leader>gP :Gpull<Enter>
+" general
+nmap <leader>vq :q<Enter>
